@@ -1,63 +1,48 @@
-<!DOCTYPE html> <html>
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8"> <style>
-/* --- CSS 樣式區塊 --- */
+  <meta charset="UTF-8">
+  <title>我的期中考網站</title>
 
-/* 1. ID 選擇器 (使用 #)：對應 HTML 裡設定 id="ccc" 的標籤 */
-#ccc {
-  color: #FF0000; /* 色碼設定：#FF0000 代表純紅色 */
-}
+  <style>
+    #main-title
+    {
+      color: #0000FF;
+      padding: 20px;
+      background-color: #eee;
+    }
 
-/* 2. Class 選擇器 (使用 .)：對應 HTML 裡設定 class="imgbox" 的標籤 */
-.imgbox {
-  position: relative; /* 【排版必考】相對定位：讓這個區塊成為裡面絕對定位元素的「基準座標」 */
-  display: inline-block;
-}
+    .img-container
+    {
+      position: relative;
+      display: inline-block;
+    }
 
-/* 3. Class 選擇器：對應 HTML 裡設定 class="text" 的標籤 */
-.text {
-  position: absolute; /* 【排版必考】絕對定位：讓文字脫離正常排版，浮動起來 */
-  top: 10px;          /* 距離基準框的「頂部」 10px */
-  right: 10px;        /* 距離基準框的「右側」 10px (所以會出現在右上角) */
-  color: white;       /* 文字顏色：白色 */
-  background: rgba(0,0,0,0.6); /* 背景顏色：黑色 (0,0,0)，透明度 60% (0.6) */
-  padding: 5px 10px;  /* 內邊距：上下留 5px，左右留 10px 的空間 */
-}
-</style>
+    .floating-text
+    {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 20px;
+    }
+    </style>
 </head>
 <body>
+  <div id="main-title">
+    <h1>welcome</h1>
+  </div>
 
-<div class="imgbox">
-  
-  <img src="aa.jpg" width="300">
-  
-  <img src="workplace.jpg" alt="Workplace1" usemap="#workmap">
- 
-  <map name="workmap">
-    <area shape="rect" coords="34,44,270,350" alt="Computer" href="a1.html">
-    <area shape="rect" coords="290,172,333,250" alt="Phone" href="a2.html">
-    <area shape="circle" coords="337,300,44" alt="Coffee" href="a3.html">
+  <div class="img-container">
+    <img src="city.jpg"  alt="城市風景" width="500" usemap="#mymap">
+    <div class="floating-text">右下角浮動標籤</div>
+  </div>
+  <map name="mymap">
+    <area shape="rect" coords="50,50,200,200" href="page1.html" alt="大樓">
+    <srea shape="circles" coords="400,100,50" href="page2.html" alt="月亮">
   </map>
- 
-  <img src="aa.jpg" usemap="#scene">
- 
-  <map name="scene">
-    <area shape="rect" coords="250,60,340,300" alt="Smartphone" title="手機 (Smartphone)" href="a1.html" target="_blank">
-    <area shape="rect" coords="265,90,325,260" alt="Camera Screen" title="手機螢幕 (Camera Screen)" href="a2.html" target="_blank">
-    <area shape="rect" coords="320,140,540,390" alt="Hand" title="手 (Hand)" href="a3.html" target="_blank">
-    <area shape="rect" coords="0,200,600,350" alt="Ocean" title="海洋 (Ocean)" href="a4.html" target="_blank">
-    <area shape="rect" coords="420,120,560,210" alt="Sunset" title="夕陽 (Sunset)" href="a.html" target="_blank">
-    
-    <area shape="rect" coords="0,0,600,200" alt="Sky" title="天空 (Sky)">
-  </map>
-  
-  <div class="text">城市夜景</div>
-
-</div>
-
-<div id="ccc">
-  THIS IS A TEST
-</div>
 
 </body>
-</html>
+</html>    
